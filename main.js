@@ -6,7 +6,6 @@ function init() {
 	console.log('ready!');
 	$('.block').on('click', chooseBlock);
 	$('.container').on('click', selectContainer)
-	var winner = false;
 }
 
 function chooseBlock () {
@@ -19,10 +18,6 @@ function chooseBlock () {
 		$('.block').removeClass('selected');
 		$(this).addClass('selected');
 	}
-// if(data === 1){
-// 	$('#one').addClass('selected');
-// 	console.log($('#container1').data('size'));
-// }
 }
 
 function selectContainer(event) {
@@ -36,6 +31,8 @@ function selectContainer(event) {
 	}
 if ($('#container3')[0].childNodes.length === 3) {
 	console.log("You're Winner");
+	$('.container').remove();
+	$('.block').empty();
 
 }
 
